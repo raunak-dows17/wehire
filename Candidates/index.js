@@ -28,20 +28,19 @@ fetch("candidates.json")
     table.innerHTML = row;
   });
 
-const searchFun = () => {
+const searchFunJob = () => {
   let filter = document.getElementById("jobRole").value.toLowerCase();
-  let filter2 = document.getElementById("location").value.toLowerCase();
-
+  
   let myTable = document.getElementById("table-body");
-
+  
   let tr = myTable.getElementsByTagName('tr');
-
+  
   for (let i = 0; i < tr.length; i++) {
     let title = tr[i].getElementsByTagName('td')[2];
-
+    
     if (title) {
       let textValue = title.textContent || title.innerHTML;
-
+      
       if (textValue.toLowerCase().indexOf(filter) > -1) {
         tr[i].style.display = "";
       } else {
@@ -49,13 +48,21 @@ const searchFun = () => {
       }
     }
   }
+  
+};
 
+const serachFunLocation = () => {
+  let filter2 = document.getElementById("location").value.toLowerCase();
+  let myTable = document.getElementById("table-body");
+  
+  let tr = myTable.getElementsByTagName('tr');
+  
   for (let i = 0; i < tr.length; i++) {
     let location = tr[i].getElementsByTagName('td')[3];
-
+  
     if (location) {
       let textValue = location.textContent || location.innerHTML;
-
+  
       if (textValue.toLowerCase().indexOf(filter2) > -1) {
         tr[i].style.display = "";
       } else {
@@ -63,4 +70,4 @@ const searchFun = () => {
       }
     }
   }
-};
+}
