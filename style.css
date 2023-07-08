@@ -1,0 +1,527 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+    background-color: rgb(183, 223, 247);
+}
+
+::-webkit-scrollbar-thumb {
+    width: 7px;
+    height: 7px;
+    background-color: #0482a5;
+    border-radius: 10px;
+}
+
+/* Navbar */
+
+.logo_header {
+    padding: 1.5rem;
+    width: 50%;
+    font-size: 1.2rem;
+    margin-left: 1.5rem;
+}
+
+.logo{
+    border-top: 2px solid #0482a5;
+    border-radius: 50%;
+}
+
+.navbar {
+    background: #0482a5;
+    height: 9vh;
+    width: 100%;
+    display: flex;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 50%;
+    float: right;
+}
+
+.links li {
+    list-style: none;
+    margin-top: 3.5vh;
+    padding: 0 0.5rem;
+}
+
+.links li a {
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    color: black;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+.burger {
+    display: none;
+}
+
+.auth_btn {
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.auth_btn:hover {
+    background-color: transparent;
+    transition: ease-in-out 0.5s;
+}
+
+@media screen and (max-width: 728px) {
+    .links {
+        position: absolute;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 10vh;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        background-color: transparent;
+        clip-path: circle(20px at 95% 5%);
+        -webkit-clip-path: circle(20px at 95% 5%);
+        transition: 1s ease-in-out;
+        pointer-events: none;
+    }
+
+    nav {
+        background: #0482a5;
+        height: 64px;
+        width: 100%;
+    }
+
+    .line {
+        position: relative;
+        color: white;
+        font-size: 1.5rem;
+        margin: 5px;
+    }
+
+    .burger {
+        display: unset;
+        position: absolute;
+        margin-top: 2.5vh;
+        margin-right: 1.5rem;
+        right: 10px;
+        z-index: 12;
+        cursor: pointer;
+    }
+
+    .links li {
+        height: 2vh;
+        padding: 2rem;
+    } 
+
+    .open li {
+        height: 2vh;
+        padding: 2rem;
+    }
+
+    .open {
+        background-color: #0482a5;
+        clip-path: circle(1000px at 95% 5%);
+        -webkit-clip-path: circle(1000px at 95% 5%);
+        pointer-events: all;
+        z-index: 10;
+    }
+}
+
+/* Homepage */
+
+.Homepage {
+    background-image: linear-gradient(to bottom, #0482a5, 1%, #fff), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+    height: 100vh;
+}
+
+.home-left {
+    margin: 2rem;
+}
+
+.home-left h1 {
+    font-size: 5rem;
+}
+
+.home {
+    display: flex;
+    padding: 1rem;
+    width: 100%;
+}
+
+.home-left p {
+    width: 75%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.home-left .btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.home2 {
+    background: rgb(230, 230, 230);
+}
+
+.home2-right {
+    padding: 2rem;
+}
+
+.home2-right h1 {
+    font-size: 3rem;
+    margin: 1.5rem 0rem;
+}
+
+.home2-right p {
+    margin: 1.5rem 0rem;
+    width: 75%;
+}
+
+.home2-left {
+    width: 100%;
+    margin: 2rem;
+}
+
+.home-right img {
+    width: 50vw;
+    height: 100%;
+}
+
+.home3 {
+    padding: 1.5rem;
+}
+
+.home3-left h1 {
+    font-size: 3rem;
+    margin: 1.5rem 0rem;
+}
+
+.home3-left p {
+    margin: 1.5rem 0rem;
+}
+
+.home3-right img {
+    width: 50vw;
+}
+
+@media screen and (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home-left h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-left .btns {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btns button {
+        margin: 1rem;
+    }
+
+    .home-right img{
+        width: 96vw;
+        height: auto;
+    }
+
+    .home2-left img {
+        width: 96vw;
+    }
+
+    .home2-right p {
+        width: 100%;
+    }
+
+    .home3-right img {
+        width: 96vw;
+    }
+}
+
+/* Footer */
+
+.Footer {
+    display: flex;
+    background-color: #0482a5;
+    color: white;
+}
+
+.footer-left {
+    /* width: 50vw; */
+    padding: 5rem;
+}
+
+.footer-right {
+    display: flex;
+    /* width: 50vw; */
+    padding: 3rem;
+}
+
+.footer-right ul {
+    list-style: none;
+    padding: 2rem 6rem;
+}
+
+.footer-right ul li {
+    padding: 0.5rem;
+}
+
+.copyright {
+    display: flex;
+    padding: 0.5rem;
+    background-color: #0482a5;
+    color: white;
+}
+
+.copyright-right {
+    display: flex;
+    margin-left: 45%;
+}
+
+@media screen and (max-width: 768px) {
+    .Footer {
+        flex-direction: column;
+    }
+
+    .footer-left{
+        /* width: 100%; */
+        padding: 2rem;
+    }
+
+    .footer-right {
+        /* width: 100%; */
+        padding: 1rem;
+    }
+
+    .footer-right ul {
+        padding: 0rem 2rem;
+    }
+
+    .copyright {
+        flex-direction: column;
+        padding: 1.2rem;
+    }
+
+    .copyright-left {
+        /* width: 100vw; */
+        padding: 1rem, 1rem;
+    }
+
+    .copyright-right {
+        /* width: 100vw; */
+        padding: 1rem, 1rem;
+        margin: 0;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-black {
+    color: black;
+}
+
+/* Login Page */
+
+.loginpage {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("https://images.unsplash.com/photo-1573848953384-3be02021eb0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #0482a5;
+}
+
+
+.login {
+    background-color: white;
+    padding: 2rem 5rem;
+    border-radius: 20px;
+}
+
+.login h1 {
+    font-size: 2.2rem;
+    margin: 3rem 0rem;
+    margin-bottom: 2rem; 
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.loginForm label {
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.signup form label {
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.loginForm input {
+    padding: 1rem 0.7rem;
+    border: 2px solid #0482a5;
+    outline: none;
+    font-size: 1rem;
+    border-radius: 10px;
+}
+
+
+.loginForm button {
+    margin: 1.4rem 0rem;
+    padding: 0.5rem 1.1rem;
+    color: white;
+    background-color: #0482a5;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.signup {
+    padding: 0.7rem 3rem;
+}
+
+.signup h1 {
+    margin: 1rem 0;
+}
+
+@media screen and (max-width: 768px) {
+    .login {
+        padding: 1rem 2rem;
+    }
+    
+    .signuppage {
+        background-image: url("https://images.unsplash.com/photo-1581431886211-6b932f8367f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+    }
+
+    .signup h1 {
+        margin: 0;
+    }
+}
+
+
+/* Candidates */
+
+.candidates-nav {
+    display:  flex;
+    align-items: end;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.candidates-nav h2 {
+    border-top: 2px solid #0482a5;
+    border-radius: 50%;
+}
+
+.candidates-nav form label {
+    font-size: 1.2rem;
+}
+
+.candidates-nav form input {
+    font-size: 1.2rem;
+    outline: none;
+    border: 2px solid #0482a5;
+    background: transparent;
+    border-radius: 20px;
+    padding: 1rem 1.5rem;
+}
+
+.title {
+    text-align: center;
+}
+
+.candidates-nav form button {
+    padding: 0.8rem 1.6rem;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    color: white;
+    background-color: #0482a5;
+}
+
+.candidate-details {
+    background: #0482a5;
+    border: none;
+    border-radius: 20px;
+    color: whitesmoke;
+}
+
+th,td {
+    padding: 1rem 3rem;
+}
+
+td button {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    background-color: #0482a5;
+    color: #fff;
+    border-radius: 7px;
+}
+
+@media screen and (max-width: 768px) {
+    .candidates-nav h2 {
+        border: none;
+    }
+
+    .candidates-nav {
+        padding: 1rem 0.4rem;
+        height: 6rem;
+        background-color: transparent;
+        justify-content: space-between;
+    }
+
+    .candidates-nav form label {
+        font-size: 0.7rem;
+    }
+
+    .candidates-nav form input {
+        font-size: 0.7rem;
+        outline: none;
+        border: 2px solid #0482a5;
+        background: transparent;
+        border-radius: 20px;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .candidates-nav form button {
+        padding: 0.4rem 0.8rem;
+        font-size: 1rem;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        color: white;
+        background-color: #0482a5;
+    }
+
+    .candidate {
+        overflow-y: scroll;
+    }
+}
